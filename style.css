@@ -1,0 +1,91 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding: 0 10px;
+}
+
+.sideBarItem img{
+	max-height: 55px;
+	max-Width:55px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 2px 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	/*margin: 0;*/
+}
+.background,
+.foreground {
+    background-color: #2b2b2b;
+}
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 55px 300px minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 40px;
+		grid-template-areas:
+               "header header header header"
+				"sidebar content content content"
+                "colourP colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+
+button {
+	background: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 4px 10px;
+    color: #444;
+}
+
+button + button, #loadButton {
+	margin-left: 5px;
+}
