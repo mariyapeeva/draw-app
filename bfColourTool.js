@@ -37,6 +37,7 @@ function BFColourTool(){
           pixels[off + 2],
           pixels[off + 3]
         ];
+        console.log(x,y, components,d);
         // if colour is white, fix white colour
         // convert colour to hsla and return hsla array
         return this.rgbHSL(this.whiteFix(components));
