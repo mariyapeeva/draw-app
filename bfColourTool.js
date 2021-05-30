@@ -30,7 +30,7 @@ function BFColourTool(){
     this.getColour = function(x,y){
         // get colour from pixels[]
         var d = pixelDensity();
-        var off = (y * width + x) * d * 4;
+        var off = 4 * ((y * d) * width * d + (x * d));
         var components = [
           pixels[off],
           pixels[off + 1],
